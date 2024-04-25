@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 172356354}
   - component: {fileID: 172356353}
   - component: {fileID: 172356355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ForegroundFloor
   m_TagString: ForegroundFloor
   m_Icon: {fileID: 0}
@@ -601,7 +601,6 @@ GameObject:
   - component: {fileID: 1005525590}
   - component: {fileID: 1005525594}
   - component: {fileID: 1005525595}
-  - component: {fileID: 1005525596}
   m_Layer: 0
   m_Name: CharacterPlayer
   m_TagString: Untagged
@@ -621,9 +620,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -634,7 +633,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1005525592
 SpriteRenderer:
@@ -757,41 +756,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1005525589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a01291d7e1a5c4e44b582319e5ef3f91, type: 3}
+  m_Script: {fileID: 11500000, guid: b8e9116e3d488ea4fa7cffb55563ebc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GMS: {fileID: 777418239}
-  moveLeftRight: 0
-  verticalMovement: 0
-  isMoving: 0
-  canJump: 0
-  isOnTheGround: 0
-  canStomp: 0
-  rb: {fileID: 1005525590}
-  moveSpeed: 4
-  jumpSpeed: 9
-  stompSpeed: 15
---- !u!95 &1005525596
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005525589}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 96c4d1491d970504ab5b289e26c4f094, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  _speedPlayer: 5
+  _jumpForce: 10
+  _layer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1199067448
 GameObject:
   m_ObjectHideFlags: 0
